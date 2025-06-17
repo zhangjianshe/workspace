@@ -1,0 +1,1 @@
+docker build -t hub.cangling.net/mapway/workspace:1.0 .
