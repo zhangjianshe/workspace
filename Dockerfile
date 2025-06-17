@@ -8,8 +8,8 @@ RUN apt-get update && \
 
 # Create an SSH user and set a password
 # Replace 'youruser' and 'yourpassword' with desired credentials
-ARG SSH_USER=youruser
-ARG SSH_PASSWORD=yourpassword
+ARG SSH_USER=cl
+ARG SSH_PASSWORD=workspace
 RUN useradd -rm -d /home/${SSH_USER} -s /bin/bash ${SSH_USER} && \
     echo "${SSH_USER}:${SSH_PASSWORD}" | chpasswd && \
     adduser ${SSH_USER} sudo
