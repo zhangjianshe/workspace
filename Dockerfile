@@ -6,6 +6,10 @@ RUN apt-get update && \
     apt-get install -y openssh-server sudo && \
     rm -rf /var/lib/apt/lists/*
 
+# --- ADD THIS LINE ---
+RUN mkdir -p /run/sshd && chmod 0755 /run/sshd
+# ---------------------
+
 # Create an SSH user and set a password
 # Replace 'youruser' and 'yourpassword' with desired credentials
 ARG SSH_USER=cl
